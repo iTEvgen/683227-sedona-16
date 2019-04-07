@@ -1,4 +1,4 @@
-@import "../../node-modules/normalize.css/normalize.css";
+@import "../../node_modules/normalize-scss/sass/normalize/import-now.scss";
 
 @font-face {
   font-family: 'PT Sans';
@@ -20,4 +20,3 @@
 @import "blocks/page-main.scss";
 @import "blocks/page-header.scss";
 @import "blocks/attractions.scss";
-

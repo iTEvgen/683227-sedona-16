@@ -1,8 +1,9 @@
-@import "block/normalize.scss";
-@import "block/fonts.scss";
-@import "block/mixins.scss";
-@import "block/varible.scss";
-@import "block/base.scss";
+@import "blocks/variable.scss";
+@import "blocks/mixins.scss";
+@import "blocks/normalize.scss";
+@import "blocks/fonts.scss";
+@import "blocks/base.scss";
+@import "blocks/lists.scss";
 @import "blocks/page-main.scss";
 @import "blocks/page-header.scss";
 @import "blocks/attractions.scss";
@@ -10,4 +11,3 @@
 @import "blocks/gallery.scss";
 @import "blocks/hotel-search.scss";
 @import "blocks/page-footer.scss";
-@import "block/list.scss";

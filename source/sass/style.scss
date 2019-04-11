@@ -1,23 +1,13 @@
-@import "normalize.scss";
-
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/ptsans.woff2") format(woff2), url("../fonts/ptsans.woff") format(woff);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PT Sans Bold";
-  src: url("../fonts/ptsansbold.woff2") format(woff2), url("../fonts/ptsansbold.woff") format(woff);
-  font-weight: bold;
-  font-style: normal;
-}
-
-@import "blocks/page-header.scss";
+@import "block/normalize.scss";
+@import "block/fonts.scss";
+@import "block/mixins.scss";
+@import "block/varible.scss";
+@import "block/base.scss";
 @import "blocks/page-main.scss";
+@import "blocks/page-header.scss";
 @import "blocks/attractions.scss";
 @import "blocks/services.scss";
 @import "blocks/gallery.scss";
 @import "blocks/hotel-search.scss";
 @import "blocks/page-footer.scss";
+@import "block/list.scss";

@@ -1,0 +1,11 @@
+.attractions {
+  border: 1px solid #000000;
+  padding-top: 45px;
+  padding-bottom: 33px;
+}
+
+.attractions__item {
+  &--bg-round {
+    background-color: $color-bg;
+  }
+}

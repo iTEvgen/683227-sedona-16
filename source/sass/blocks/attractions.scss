@@ -1,11 +1,69 @@
 .attractions {
-  border: 1px solid #000000;
+  display: flex;
+  flex-direction: column;
   padding-top: 45px;
   padding-bottom: 33px;
+}
+
+.attractions__header {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.attractions__wrapper {
+  width: 320px;
+  margin: 0 auto;
 }
 
 .attractions__item {
   &--bg-round {
     background-color: $color-bg;
+  }
+
+  &--position {
+    background-color: $html-bg;
+  }
+}
+
+.attractions__description {
+  margin: 0;
+}
+
+@media (min-width: $table-width) {
+  .attractions__header {
+    width: 477px;
+  }
+
+  .attractions__wrapper {
+    min-width: 768px;
+    margin: 0 auto;
+  }
+
+  .attractions__item {
+    display: flex;
+    margin: 0 auto;
+
+    &--position {
+      width: 256px;
+      flex-direction: column;
+    }
+
+    &--order {
+      order: -1;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .attractions__wrapper {
+    min-width: 1200px;
+  }
+
+  .attractions__item {
+    width: 1200px;
+
+    &--position {
+      width: 400px;
+    }
   }
 }

@@ -29,6 +29,10 @@
   margin: 0;
 }
 
+.attractions__image {
+  display: block;
+}
+
 @media (min-width: $table-width) {
   .attractions__header {
     width: 477px;

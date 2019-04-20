@@ -1,4 +1,40 @@
 .gallery {
+  display: flex;
+  flex-direction: column;
   padding-top: 44px;
-  border: 1px solid #000000;
+}
+
+.gallery__header {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.gallery__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.gallery__image {
+  @include figure-reset;
+}
+
+@media (min-width: $table-width) {
+  .gallery__wrapper {
+    width: 648px;
+    margin: 0 auto;
+  }
+
+  .gallery__item {
+    &--width {
+      width: 100%;
+      border: 1px solid #000000;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gallery__wrapper {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }

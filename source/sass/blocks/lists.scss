@@ -1,5 +1,63 @@
 .site-list {
   background-color: $color-bg;
+
+  @include list-reset;
+}
+
+@media (min-width: $table-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-sub;
+  }
+}
+
+.attractions__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include list-reset;
+}
+
+.services__list {
+  @include list-reset;
+}
+
+@media (min-width: $table-width) {
+  .services__list {
+    display: flex;
+    width: 690px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .services__list {
+    width: 1200px;
+  }
+}
+
+.gallery__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include list-reset;
+}
+
+@media (min-width: $table-width) {
+  .gallery__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+
+  @include list-reset;
 }
 
 .social__item {

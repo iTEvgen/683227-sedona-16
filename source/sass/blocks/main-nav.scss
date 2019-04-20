@@ -1,0 +1,28 @@
+.main-nav {
+  display: flex;
+  flex-direction: column-reverse;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.main-nav__toggle {
+  align-self: flex-end;
+}
+
+@media (min-width: $table-width) {
+  .main-nav__wrapper {
+    min-width: 695px;
+    margin: 0 auto;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__wrapper {
+    min-width: 1040px;
+    margin: 0 auto;
+  }
+}

@@ -10,7 +10,7 @@
 }
 
 @media (min-width: $table-width) {
-  .main-nav__wrapper {
+  .main-nav {
     min-width: 695px;
     margin: 0 auto;
   }
@@ -21,7 +21,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav__wrapper {
+  .main-nav {
     min-width: 1040px;
     margin: 0 auto;
   }

@@ -1,13 +1,28 @@
 .attractions {
   display: flex;
   flex-direction: column;
-  padding-top: 45px;
-  padding-bottom: 33px;
 }
 
 .attractions__header {
+  box-sizing: border-box;
   width: 320px;
+  text-align: center;
   margin: 0 auto;
+  padding: 43px 12px 26px 12px;
+}
+
+.attractions__slogon {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
+  @include margin-reset;
+
+  margin-bottom: 27px;
+}
+
+.attractions__intro {
+  @include margin-reset;
 }
 
 .attractions__wrapper {
@@ -16,17 +31,65 @@
 }
 
 .attractions__item {
+  width: 320px;
+
   &--bg-round {
     background-color: $color-bg;
   }
 
   &--position {
+    padding-top: 25px;
     background-color: $html-bg;
+  }
+
+  &:nth-child(6) p {
+    border-bottom: none;
+  }
+}
+
+.attractions__title {
+  padding: 55px 0 6px 0;
+  color: $color-sub;
+
+  @include margin-reset;
+
+  &--padding {
+    padding-top: 38px;
+  }
+
+  &--text-modi {
+    color: $color-primary;
+    margin-bottom: 6px;
+
+    @include padding-reset;
+  }
+}
+
+.attractions__number {
+  display: block;
+  color: $color-sub;
+
+  &--text-modi {
+    margin-bottom: 13px;
+    color: $color-primary;
   }
 }
 
 .attractions__description {
-  margin: 0;
+  margin: 0 auto 0 auto;
+  padding: 11px 12px 40px 12px;
+  line-height: 22px;
+  color: $color-sub;
+
+  &--text-modi {
+    width: 280px;
+    color: $color-primary;
+    border-bottom: 1px solid #d6d6d6;
+
+    @include padding-reset;
+
+    padding-bottom: 27px;
+  }
 }
 
 .attractions__image {
@@ -44,6 +107,7 @@
   }
 
   .attractions__item {
+    width: auto;
     display: flex;
     margin: 0 auto;
 
@@ -54,6 +118,13 @@
 
     &--order {
       order: -1;
+    }
+  }
+
+  .attractions__description {
+    &--text-modi {
+      width: auto;
+      border-bottom: none;
     }
   }
 }

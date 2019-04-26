@@ -11,7 +11,7 @@
 
 .page-header__logo {
   position: absolute;
-  top: -22px;
+  top: -55px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
@@ -34,7 +34,7 @@
   }
 }
 
-@media(min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
   .page-header__wrapper {
     min-width: 1040px;
     margin: 0 auto;

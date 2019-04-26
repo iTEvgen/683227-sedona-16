@@ -1,7 +1,39 @@
 .site-list {
+  font-weight: 600;
+  text-align: center;
   background-color: $color-bg;
 
   @include list-reset;
+}
+
+.site-list a {
+  display: block;
+  padding: 7px 0 7px 10px;
+  font-size: 18px;
+  line-height: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #81b3d2;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+}
+
+.site-list a,
+a[href] {
+  &:hover {
+    background-color: #669ec0;
+    border-top-color: #669ec0;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496bd;
+    border-top-color: #5496bd;
+  }
+}
+
+.site-list__item:nth-child(4) a {
+  border-bottom: none;
 }
 
 @media (min-width: $table-width) {
@@ -15,13 +47,17 @@
 .attractions__list {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
 
   @include list-reset;
 }
 
 .services__list {
+  text-align: left;
+
   @include list-reset;
 }
+
 
 @media (min-width: $table-width) {
   .services__list {
@@ -55,11 +91,6 @@
 
 .social__list {
   display: flex;
-  justify-content: space-between;
 
   @include list-reset;
-}
-
-.social__item {
-  background-color: $color-bg;
 }

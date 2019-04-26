@@ -1,4 +1,42 @@
 .services {
-  padding-top: 41px;
-  padding-bottom: 42px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.services__item {
+  padding-left: 69px;
+  margin-bottom: 18px;
+
+  &--house {
+    padding-top: 10px;
+    background-image: url("../../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-position: 21px 1px;
+    background-size: 40px 37px;
+  }
+
+  &--souvenirs {
+    padding-top: 10px;
+    background-image: url("../../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 21px 0;
+    background-size: 40px 37px;
+  }
+
+  &--food {
+    padding-top: 10px;
+    background-image: url("../../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-position: 18px 5px;
+    background-size: 40px 37px;
+  }
+}
+
+.services__title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.services__description {
+  line-height: 21px;
 }

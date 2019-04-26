@@ -8,6 +8,55 @@
   padding-bottom: 35px;
 }
 
+.page-footer__contacts {
+  margin-bottom: 14px;
+}
+
+.contacts__text {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.page-footer__social {
+  margin-bottom: 40px;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  margin-right: 7px;
+  background-color: $color-bg;
+}
+
+.social__item:nth-child(3) {
+  margin-right: 0;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+}
+
+.social__icon {
+  fill: #ffffff;
+}
+
+.copyright {
+  display: flex;
+  line-height: 0;
+}
+
+.copyright a {
+  margin-left: 10px;
+}
+
 @media (min-width: $table-width) {
   .page-footer {
     justify-content: space-between;
@@ -19,9 +68,6 @@
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    justify-content: space-between;
-    align-items: baseline;
-    flex-direction: row;
     width: 960px;
   }
 }

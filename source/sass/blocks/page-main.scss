@@ -9,14 +9,19 @@
   justify-content: center;
   background: url("../../img/bg-back-mobile@1x.jpg") top no-repeat;
 
-  &--padding {
-    height: 156px;
+  &--img-modi {
+    height: 159px;
     background: url("../../img/bg-back-mobile@1x.jpg") bottom no-repeat;
   }
 }
 
 .page-main__text-index {
   margin-top: 7px;
+  &--position {
+    margin-top: 52px;
+    width: 229px;
+    height: 39px;
+  }
 }
 
 @media (min-width: $desktop-width) {

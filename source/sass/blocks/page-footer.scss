@@ -30,6 +30,14 @@
   line-height: 0;
   margin-right: 7px;
   background-color: $color-bg;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
 }
 
 .social__item:nth-child(3) {
@@ -42,6 +50,10 @@
   align-items: center;
   width: 46px;
   height: 48px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social__icon {
@@ -55,6 +67,16 @@
 
 .copyright a {
   margin-left: 10px;
+}
+
+.copyright__icon {
+  &:hover {
+    fill: #81b3d2;
+  }
+
+  &:active {
+    fill: #b2b2b2;
+  }
 }
 
 @media (min-width: $table-width) {

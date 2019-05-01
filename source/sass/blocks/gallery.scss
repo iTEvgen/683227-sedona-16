@@ -4,6 +4,7 @@
 }
 
 .gallery__header {
+  position: relative;
   width: 320px;
   text-align: center;
   padding: 22px 9px 0 9px;
@@ -49,19 +50,20 @@
   margin-bottom: 1px;
 }
 
-.gallery__image img{
+.gallery__image img {
   display: block;
   margin-bottom: 14px;
 }
 
 .gallery__description {
   font-weight: bold;
-  color: $color-primary;;
+  letter-spacing: -1px;
+  color: $color-primary;
 }
 
 .gallery__author {
   font-size: 13px;
-  color: $color-primary;
+  color: #333333;
   text-transform: capitalize;
 
   @include margin-reset;
@@ -81,18 +83,114 @@
   }
 }
 
+@media (max-width: $mobile-width-only) {
+  .gallery__header {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -27px;
+      left: 0;
+      border: 23px solid transparent;
+      border-bottom: 4px solid #ffffff;
+      border-left: 140px solid #ffffff;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -27px;
+      right: 0;
+      border: 23px solid transparent;
+      border-bottom: 4px solid #ffffff;
+      border-right: 140px solid #ffffff;
+    }
+  }
+}
+
 @media (min-width: $table-width) {
+  .gallery__header {
+    width: 768px;
+    padding: 45px 0 43px 0;
+    margin: 0 auto;
+    border-bottom: none;
+  }
+
+  .gallery__title {
+    font-size: 31px;
+    letter-spacing: -2px;
+    margin-bottom: 29px;
+  }
+
+  .gallery__intro {
+    box-sizing: border-box;
+    padding-left: 145px;
+    padding-right: 145px;
+    margin-bottom: 26px;
+  }
+
   .gallery__wrapper {
     width: 648px;
+    padding: 0;
     margin: 0 auto;
   }
 
   .gallery__item {
+    position: relative;
     justify-content: flex-start;
     border-bottom: none;
+    background-color: #f2f2f2;
+    width: 324px;
+
+    @include margin-reset;
+
     &--width {
       width: 100%;
-      border: 1px solid #000000;
+    }
+  }
+
+  .gallery__item a {
+    margin-bottom: 14px;
+  }
+
+  .gallery__image {
+    @include margin-reset;
+  }
+
+  .gallery__image img {
+    width: 648px;
+    height: 400px;
+  }
+
+  .gallery__image--proportions img {
+    width: 324px;
+    height: 267px;
+  }
+
+  .gallery__description {
+    margin-left: 20px;
+  }
+
+  .gallery__author {
+    @include margin-reset;
+
+    margin-left: 20px;
+  }
+
+
+  .gallery__number {
+    position: absolute;
+    bottom: 27px;
+    right: 21px;
+
+    &--like {
+      background-image: url("../../img/icon-like02.svg");
+      background-repeat: no-repeat;
+      background-position: 7px 7px;
+    }
+
+    &--modi-like {
+      right: 31px;
+      background-position: 7px 7px;
     }
   }
 }

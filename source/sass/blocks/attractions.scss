@@ -5,6 +5,7 @@
 
 .attractions__header {
   box-sizing: border-box;
+  position: relative;
   width: 320px;
   text-align: center;
   margin: 0 auto;
@@ -22,11 +23,14 @@
 }
 
 .attractions__intro {
+  color: #333333;
+
   @include margin-reset;
 }
 
 .attractions__wrapper {
   width: 320px;
+  position: relative;
   margin: 0 auto;
 }
 
@@ -38,7 +42,7 @@
   }
 
   &--position {
-    padding-top: 25px;
+    padding-top: 27px;
     background-color: $html-bg;
   }
 
@@ -76,14 +80,15 @@
 }
 
 .attractions__description {
+  font-size: 13px;
+  line-height: 21px;
   margin: 0 auto 0 auto;
-  padding: 11px 12px 40px 12px;
-  line-height: 22px;
+  padding: 12px 12px 40px 12px;
   color: $color-sub;
 
   &--text-modi {
     width: 280px;
-    color: $color-primary;
+    color: #333333;
     border-bottom: 1px solid #d6d6d6;
 
     @include padding-reset;
@@ -94,11 +99,60 @@
 
 .attractions__image {
   display: block;
+
+  &--order {
+    order: -1;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .attractions__header {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -27px;
+      left: 0;
+      border: 23px solid transparent;
+      border-bottom: 4px solid #ffffff;
+      border-left: 140px solid #ffffff;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -27px;
+      right: 0;
+      border: 23px solid transparent;
+      border-bottom: 4px solid #ffffff;
+      border-right: 140px solid #ffffff;
+    }
+  }
+
+  .attractions__wrapper {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 160px solid transparent;
+      border-top: 15px solid #ffffff;
+    }
+  }
 }
 
 @media (min-width: $table-width) {
   .attractions__header {
-    width: 477px;
+    width: 520px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  .attractions__slogon {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 27px;
   }
 
   .attractions__wrapper {
@@ -111,20 +165,51 @@
     display: flex;
     margin: 0 auto;
 
-    &--position {
-      width: 256px;
-      flex-direction: column;
+    &--bg-round {
+      box-sizing: border-box;
+      width: 261px;
+      padding: 45px 24px 0 24px;
     }
 
-    &--order {
-      order: -1;
+    &--position {
+      flex-direction: column;
+      box-sizing: border-box;
+      width: 256px;
+      padding: 45px 41px 0 41px;
     }
+  }
+
+  .attractions__title {
+    font-size: 20px;
+    padding: 0;
+    margin-bottom: 7px;
+    color: $color-sub;
+
+    &--text-modi {
+      margin-bottom: 6px;
+      color: $color-primary;
+    }
+  }
+
+  .attractions__number {
+    margin-bottom: 9px;
+
+    &--text-modi {
+      margin-bottom: 19px;
+    }
+  }
+
+  .attractions__image {
+    width: 521px;
+    height: 256px;
   }
 
   .attractions__description {
     &--text-modi {
+      font-size: 13px;
       width: auto;
       border-bottom: none;
+      margin-bottom: 18px;
     }
   }
 }
@@ -137,8 +222,47 @@
   .attractions__item {
     width: 1200px;
 
+    &--bg-round {
+      box-sizing: border-box;
+      width: 400px;
+      padding: 52px 24px 0 24px;
+    }
+
     &--position {
       width: 400px;
+      padding: 45px 19px 22px 19px;
+    }
+  }
+
+  .attractions__title {
+    font-size: 20px;
+    padding: 0 94px 0 94px;
+    margin-bottom: 7px;
+    box-sizing: border-box;
+
+    &--text-modi {
+      margin-bottom: 7px;
+      color: $color-primary;
+    }
+  }
+
+  .attractions__image {
+    width: 800px;
+    height: 256px;
+  }
+
+  .attractions__description {
+
+    padding-bottom: 26px;
+    box-sizing: border-box;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    &--text-modi {
+      font-size: 13px;
+      width: auto;
+      border-bottom: none;
+      margin-bottom: 15px;
     }
   }
 }

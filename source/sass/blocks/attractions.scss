@@ -34,6 +34,14 @@
   margin: 0 auto;
 }
 
+.attractions__list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+  @include list-reset;
+}
+
 .attractions__item {
   width: 320px;
 
@@ -106,28 +114,6 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .attractions__header {
-    &::before {
-      content: "";
-      position: absolute;
-      top: -27px;
-      left: 0;
-      border: 23px solid transparent;
-      border-bottom: 4px solid #ffffff;
-      border-left: 140px solid #ffffff;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -27px;
-      right: 0;
-      border: 23px solid transparent;
-      border-bottom: 4px solid #ffffff;
-      border-right: 140px solid #ffffff;
-    }
-  }
-
   .attractions__wrapper {
     &::before {
       content: "";

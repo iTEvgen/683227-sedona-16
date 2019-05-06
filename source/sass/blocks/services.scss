@@ -3,6 +3,12 @@
   padding-bottom: 18px;
 }
 
+.services__list {
+  text-align: left;
+
+  @include list-reset;
+}
+
 .services__item {
   padding-left: 69px;
   padding-right: 15px;
@@ -52,6 +58,14 @@
     margin-bottom: 46px;
   }
 
+  .services__list {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .services__item {
     width: 256px;
     padding: 101px 35px 0 35px;
@@ -91,6 +105,10 @@
     display: flex;
     padding: 58px 0 0 0;
     margin-bottom: 68px;
+  }
+
+  .services__list {
+    width: 1200px;
   }
 
   .services__item {

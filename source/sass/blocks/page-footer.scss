@@ -23,6 +23,12 @@
   margin-bottom: 40px;
 }
 
+.social__list {
+  display: flex;
+
+  @include list-reset;
+}
+
 .social__item {
   display: flex;
   justify-content: center;

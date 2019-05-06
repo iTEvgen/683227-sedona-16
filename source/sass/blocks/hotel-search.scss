@@ -30,11 +30,32 @@
   letter-spacing: -1px;
   text-transform: uppercase;
   cursor: pointer;
-  color: $html-bg;
+  color: $color-sub;
   width: 280px;
   height: 58px;
   border: none;
   background-color: $color-bg;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--disabled {
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    cursor: default;
+    color: $color-sub;
+    width: 280px;
+    height: 58px;
+    border: none;
+    background-color: #e5e5e5;
+  }
 }
 
 @media (min-width: $table-width) {
@@ -66,6 +87,19 @@
 
   .hotel-search__button {
     width: 456px;
+
+    &--disabled {
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      cursor: default;
+      color: $color-sub;
+      width: 456px;
+      height: 58px;
+      border: none;
+      background-color: #e5e5e5;
+    }
   }
 }
 

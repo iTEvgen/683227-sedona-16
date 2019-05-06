@@ -1,28 +1,82 @@
 .main-nav {
   display: flex;
   flex-direction: column-reverse;
+  position: relative;
   min-width: 320px;
   margin: 0 auto;
 }
 
-.main-nav__toggle {
-  align-self: flex-end;
+.main-nav__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 55px;
+  background-color: $color-sub;
 }
 
+.main-nav__toggle {
+  position: relative;
+  top: 3px;
+  right: 7px;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 13px;
+  width: 23px;
+  height: 4px;
+  background-color: #81b3d2;
+  box-shadow: 0 8px 0 0 #81b3d2, 0 16px 0 0 #81b3d2;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: -220px;
+  right: 7px;
+  background-color: rgba(129, 179, 210, 0.1);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 13px;
+    width: 26px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
 @media (min-width: $table-width) {
-  .main-nav__wrapper {
-    min-width: 695px;
+  .main-nav {
+    min-width: 768px;
     margin: 0 auto;
   }
 
-  .main-nav__toggle {
+  .main-nav__wrapper {
     display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav__wrapper {
-    min-width: 1040px;
+  .main-nav {
+    min-width: 1060px;
     margin: 0 auto;
   }
 }

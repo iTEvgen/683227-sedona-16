@@ -107,10 +107,6 @@
 
 .attractions__image {
   display: block;
-
-  &--order {
-    order: -1;
-  }
 }
 
 @media (max-width: $mobile-width-only) {
@@ -192,6 +188,10 @@
   .attractions__image {
     width: 521px;
     height: 256px;
+
+    &--order {
+      order: -1;
+    }
   }
 
   .attractions__description {

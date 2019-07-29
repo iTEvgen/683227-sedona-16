@@ -125,8 +125,10 @@
 
 @media (min-width: $table-width) {
   .attractions__header {
-    width: 520px;
+    width: 542px;
     padding-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 25px;
   }
 

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <title>HTML Academy: Седона</title>
   </head>
@@ -40,25 +40,25 @@
         <div class="feedback-form__header">
           <h2 class="visually-hidden">Форма для отзывов</h2>
           <p class="feedback-form__title">Оставьте свой отзыв</p>
-          <p class="feedback-form__intro">Помогите нашим отелям стать лучше!<br> оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <p class="feedback-form__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
         <div class="feedback-form__wrapper">
           <form action="https://echo.htmlacademy.ru" class="form" method="GET">
-            <div class="form__element">
+            <div class="form__element form__element--width">
               <fieldset class="form__fiel">
                 <legend class="form__title">Представьтесь:</legend>
                 <ul class="form__list">
-                  <li class="form__item">
+                  <li class="form__item form__item--box-one">
                     <label for="name-id" class="form__name">Имя*:</label>
-                    <input id="name-id" class="" type="text" name="name" placeholder="Петр" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                    <input id="name-id" class="form__input form__input--name" type="text" name="name" placeholder="Петр" pattern="[A-Za-zА-Яа-яЁё]{2,}">
                   </li>
-                  <li class="form__item">
+                  <li class="form__item form__item--box-one">
                     <label for="surname-id" class="form__name">Фамилия*:</label>
-                    <input id="surname-id" class="" type="text" name="surname" placeholder="Иванов" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                    <input id="surname-id" class="form__input" type="text" name="surname" placeholder="Иванов" pattern="[A-Za-zА-Яа-яЁё]{2,}">
                   </li>
-                  <li class="form__item">
+                  <li class="form__item form__item--box-one">
                     <label for="patronymic-id" class="form__name">Отчество*:</label>
-                    <input id="patronymic-id" class="" type="text" name="patronymic" placeholder="Александрович" pattern="[A-Za-zА-Яа-яЁё]{2,}">
+                    <input id="patronymic-id" class="form__input" type="text" name="patronymic" placeholder="Александрович" pattern="[A-Za-zА-Яа-яЁё]{2,}">
                   </li>
                 </ul>
               </fieldset>
@@ -67,31 +67,31 @@
               <fieldset class="form__fiel">
                 <legend class="form__title">Контактная информация:</legend>
                 <ul class="form__list">
-                  <li class="form__item">
-                    <label for="telephone-id" class="form__name">Контактный телефон*:</label>
-                    <input id="telephone-id" class="" title="+7 XXX XXX XX XX" type="tel" name="telephone" placeholder="Введите телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+                  <li class="form__item form__item--box-two">
+                    <label for="telephone-id" class="form__name form__name--padding name__icon-phone">Контактный телефон*:</label>
+                    <input id="telephone-id" class="form__input form__input--contacts" title="+7 XXX XXX XX XX" type="tel" name="telephone" placeholder="Введите телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
                   </li>
-                  <li class="form__item">
-                    <label for="e-mail-id" class="form__name">Электронная почта*:</label>
-                    <input id="e-mail-id" class="" type="email" title="name@domain.com" name="e-mail" placeholder="Введите e-mail">
+                  <li class="form__item form__item--box-two">
+                    <label for="e-mail-id" class="form__name form__name--padding name__icon-email">Электронная почта*:</label>
+                    <input id="e-mail-id" class="form__input form__input--contacts" type="email" title="name@domain.com" name="e-mail" placeholder="Введите e-mail">
                   </li>
                 </ul>
               </fieldset>
             </div>
-            <div class="form__element">
+            <div class="form__element form__element--width form__element--order">
               <fieldset class="form__fiel">
                 <legend class="form__title">Ваше Общее впечатление:</legend>
-                <ul class="form__list">
+                <ul class="form__list form__list--modific">
                   <li class="form__item">
-                    <input id="positive-id" type="radio" class="" name="impression" value="positive" checked>
+                    <input id="positive-id" type="radio" class="visually-hidden form-radio" name="impression" value="positive" checked>
                     <label for="positive-id" class="form__name">Скорее положительное</label>
                   </li>
                   <li class="form__item">
-                    <input id="negative-id" type="radio" class="" name="impression" value="negative">
+                    <input id="negative-id" type="radio" class="visually-hidden form-radio" name="impression" value="negative">
                     <label for="negative-id" class="form__name">Скорее отрицательное</label>
                   </li>
                   <li class="form__item">
-                    <input id="indifference-id" type="radio" class="" name="impression" value="indifference">
+                    <input id="indifference-id" type="radio" class="visually-hidden form-radio" name="impression" value="indifference">
                     <label for="indifference-id" class="form__name">Затрудняюсь ответить</label>
                   </li>
                 </ul>
@@ -99,22 +99,22 @@
             </div>
             <div class="form__element">
               <fieldset class="form__fiel">
-                <legend class="form__title">посещенные достопримечательности:</legend>
-                <ul class="form__list">
-                  <li class="form__item">
-                    <input id="box-one-id" type="checkbox" class="" name="option1" value="selected1" checked>
+                <legend class="form__title">посещенные<br> достопримечательности:</legend>
+                <ul class="form__list form__list--modific">
+                  <li class="form__item ">
+                    <input id="box-one-id" type="checkbox" class="visually-hidden input-checkbox" name="option1" value="selected1" checked>
                     <label for="box-one-id" class="form__name">Мост Дьявола</label>
                   </li>
                   <li class="form__item">
-                    <input id="box-two-id" type="checkbox" class="" name="option2" value="selected2" checked>
+                    <input id="box-two-id" type="checkbox" class="visually-hidden input-checkbox" name="option2" value="selected2" checked>
                     <label for="box-two-id" class="form__name">Гора-Колокол</label>
                   </li>
                   <li class="form__item">
-                    <input id="box-three-id" type="checkbox" class="" name="option3" value="selected2" checked>
+                    <input id="box-three-id" type="checkbox" class="visually-hidden input-checkbox" name="option3" value="selected2" checked>
                     <label for="box-three-id" class="form__name">Слайд-парк</label>
                   </li>
                   <li class="form__item">
-                    <input id="box-four-id" type="checkbox" class="" name="option4" value="selected2">
+                    <input id="box-four-id" type="checkbox" class="visually-hidden input-checkbox" name="option4" value="selected2">
                     <label for="box-four-id" class="form__name">Красные скалы</label>
                   </li>
                 </ul>
@@ -126,7 +126,9 @@
                 <textarea class="form__emotions" name="emotions" cols="20" rows="5" wrap="hard" placeholder="Опишите подробно все свои восторги"></textarea>
               </fieldset>
             </div>
-            <button class="" type="submit">Отправить отзыв</button>
+            <div class="form__element">
+              <button class="hotel-search__button" type="submit">Отправить отзыв</button>
+            </div>
           </form>
         </div>
       </section>

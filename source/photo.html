@@ -2,7 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <title>HTML Academy: Седона Фото видео</title>
   </head>
@@ -66,8 +67,8 @@
                   <figcaption >
                     <p class="gallery__description">Неродные просторы</p>
                     <p class="gallery__author">Автор фото: Борис</p>
-                    <svg role="img" aria-labelledby="heading" focusable="false" class="gallery__like" width="22" height="20">
-                      <title id="heading">Лайки</title>
+                    <svg role="img" aria-labelledby="like-one" focusable="false" class="gallery__like" width="22" height="20">
+                      <title id="like-one">Лайки</title>
                       <use xlink:href="#icon-like"></use>
                     </svg>
                     <span class="gallery__number">1350</span>
@@ -89,8 +90,8 @@
                   <figcaption>
                     <p class="gallery__description">Местная растительность</p>
                     <p class="gallery__author">Автор фото: Сергей</p>
-                    <svg role="img" aria-labelledby="heading" focusable="false" class="gallery__like" width="22" height="20">
-                      <title id="heading">Лайки</title>
+                    <svg role="img" aria-labelledby="like-two" focusable="false" class="gallery__like" width="22" height="20">
+                      <title id="like-two">Лайки</title>
                       <use xlink:href="#icon-like"></use>
                     </svg>
                     <span class="gallery__number ">143</span>
@@ -112,8 +113,8 @@
                   <figcaption>
                     <p class="gallery__description">Дорога на север</p>
                     <p class="gallery__author">Автор фото: Петр</p>
-                    <svg role="img" aria-labelledby="heading" focusable="false" class="gallery__like" width="22" height="20">
-                      <title id="heading">Лайки</title>
+                    <svg role="img" aria-labelledby="like-three" focusable="false" class="gallery__like" width="22" height="20">
+                      <title id="like-three">Лайки</title>
                       <use xlink:href="#icon-like"></use>
                     </svg>
                     <span class="gallery__number">96</span>
@@ -147,6 +148,61 @@
           </ul>
         </div>
       </section>
+      <section class="video">
+        <div class="gallery__header gallery__header--reset-padding">
+          <h2 class="visually-hidden">Видеопрезентации</h2>
+          <p class="gallery__title">Все еще сомневаетесь?</p>
+          <p class="gallery__intro">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        </div>
+        <div class="gallery__wrapper gallery__wrapper--mody">
+          <picture>
+            <source media="(min-width: 1200px)" type="image/webp" srcset="img/video-desktop@1x.webp">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/video-tablet@1x.webp">
+            <source type="img/webp" srcset="img/video-mobile@1x.webp">
+            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
+            <img class="video__presen" src="img/video-mobile@1x.jpg" alt="Видеопрезентация Города Седона">
+          </picture>
+          <div class="video__player">
+            <div class="video__player-control">
+              <span class="control__one"></span>
+              <span class="control__two"></span>
+            </div>
+            <div class="player-control__wrapper">
+              <button class="control__button" type="button">
+                <span class="visually-hidden">replay</span>
+                <svg class="icon__control" aria-hidden="true" role="presentation" focusable="false" version="1.0" xmlns="http://www.w3.org/2000/svg" width="16" height="20">
+                  <title>replay</title>
+                  <path d="M8 4V0L3 5l5 5V6c3.315 0 6 2.686 6 6s-2.685 6-6 6-6-2.686-6-6H0c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+                </svg>
+              </button>
+            </div>
+            <button class="control__button control__button--padding" type="button">
+              <span class="visually-hidden">subtitles</span>
+              <svg class="icon__control" aria-hidden="true" role="presentation" focusable="false" version="1.0" xmlns="http://www.w3.org/2000/svg" width="32" height="20">
+                <title>subtitles</title>
+                <path d="M29 0H3C1.35 0 0 1.35 0 3v14c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM14.403
+                   15.854a8.61 8.61 0 01-1.678.164 5.986 5.986 0 01-1.976-.323c-.623-.214-1.172-.562-1.646-1.041s-.852-1.103-1.133-1.868c-.28-.766-.419-1.695-.419-2.786
+                   0-1.134.157-2.085.471-2.851.315-.768.723-1.384 1.224-1.854a4.53 4.53 0 011.679-1.008 5.86 5.86 0 011.852-.307c.66 0
+                   1.22.045 1.678.134.457.087.835.192 1.133.313l-.448 1.92a3.332 3.332 0 00-.902-.265A8.244 8.244 0 0012.973 6c-.915 0-1.649.325-2.206.977-.558.651-.836
+                   1.663-.836 3.031 0 .598.067 1.142.199 1.632.132.493.334.913.603 1.26.271.349.607.619 1.01.812.402.193.867.29 1.396.29.496 0 .915-.049
+                   1.257-.148.342-.099.639-.227.893-.38l.463 1.841c-.354.249-.803.43-1.349.539zm8.698 0a8.618 8.618 0 01-1.678.164 5.986 5.986 0
+                   01-1.976-.323c-.623-.214-1.172-.562-1.646-1.041s-.852-1.103-1.133-1.868c-.281-.767-.421-1.695-.421-2.786 0-1.134.157-2.085.471-2.851.314-.768.723-1.384 1.223-1.854a4.526
+                   4.526 0 011.68-1.008 5.858 5.858 0 011.851-.307c.661 0 1.221.045 1.678.134a6.05 6.05 0 011.133.313l-.446 1.918a3.314 3.314 0 00-.901-.265A8.569 8.569 0 0021.67
+                   6c-.915 0-1.649.325-2.206.977-.558.651-.836 1.663-.836 3.031 0 .598.067 1.142.199 1.632.132.493.334.913.603 1.26.271.349.606.619 1.009.812.402.193.868.29 1.396.29.497
+                   0 .915-.049 1.257-.148.342-.099.64-.227.894-.38l.463 1.841c-.353.249-.803.43-1.348.539z"/>
+              </svg>
+            </button>
+            <button class="control__button control__button--padding-left" type="button">
+              <span class="visually-hidden">fullscreen</span>
+              <svg class="icon__control" aria-hidden="true" role="presentation" focusable="false" version="1.0" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <title>fullscreen</title>
+                <path d="M0 0v6h3V3h3V0H3zm3 14H0v6h6v-3H3zM17 0h-3v3h3v3h3V0zm0 17h-3v3h6v-6h-3z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__contacts contacts">
@@ -155,9 +211,9 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a href="#" class="social__link social__link--twitter"><span class="visually-hidden">Твиттер</span>
-              <svg class="social__icon" role="presentation" aria-hidden="true" focusable="false" version="1" xmlns="http://www.w3.org/2000/svg" width="17.5" height="14.663">
-                <title id="heading">Твиттер</title>
+            <a href="#" class="social__link social__link--twitter" aria-label="Переход на социальною сеть Твиттер"><span class="visually-hidden">Твиттер</span>
+              <svg class="social__icon" role="presentation" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="17.5" height="14.663">
+                <title>Твиттер</title>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283.153c1.736-.484 3.074.264 3.685 1.15.694-.225
                   1.372-.47 2.072-.69-.004.841-.538 1.478-.883 1.728.704.165 1.343-.481 1.343-.481-.175.977-1.035
                   1.746-1.611 1.977-.239 6.592-3.272 10.956-10.382 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.341.192
@@ -167,18 +223,18 @@
             </a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link social__link--facebook"><span class="visually-hidden">Фейсбук</span>
-              <svg role="presentation" aria-hidden="true" focusable="false" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
-                <title id="heading">Фейсбук</title>
+            <a href="#" class="social__link social__link--facebook" aria-label="Переход на социальною сеть Фейсбук"><span class="visually-hidden">Фейсбук</span>
+              <svg role="presentation" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+                <title>Фейсбук</title>
                 <path class="social__icon" d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114
                   H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a href="#" class="social__link social__link--youtobe"><span class="visually-hidden">Ютуб</span>
-              <svg class="social__icon" role="presentation" aria-hidden="true" focusable="false" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
-                <title id="heading">Ютуб</title>
+            <a href="#" class="social__link social__link--youtobe" aria-label="Переход на видео хостинг Ютуб"><span class="visually-hidden">Ютуб</span>
+              <svg class="social__icon" role="presentation" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+                <title>Ютуб</title>
                 <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
               </svg>
             </a>
@@ -187,9 +243,9 @@
       </div>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link copyright__link--icon"><span class="visually-hidden">Htmlacademy</span>
-          <svg class="copyright__icon" role="presentation" aria-hidden="true" focusable="false" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-            <title id="heading">HTML Academy</title>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link copyright__link--icon" aria-label="перехода на сайт HTML Academy"><span class="visually-hidden">Htmlacademy</span>
+          <svg class="copyright__icon" role="presentation" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <title>HTML Academy</title>
             <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z
               M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z
               M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787
@@ -199,19 +255,7 @@
         </a>
       </div>
     </footer>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-      navMain.classList.remove('main-nav--nojs');
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/munu.js"></script>
+    <script src="js/picturefill.js"></script>
   </body>
 </html>

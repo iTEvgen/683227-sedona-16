@@ -1,4 +1,5 @@
 .hotel-search {
+  position: relative;
   width: 320px;
   margin: 0 auto;
   padding-top: 29px;
@@ -31,7 +32,7 @@
   text-transform: uppercase;
   cursor: pointer;
   color: $color-sub;
-  width: 280px;
+  width: 320px;
   height: 58px;
   border: none;
   background-color: $color-bg;
@@ -56,6 +57,102 @@
     border: none;
     background-color: #e5e5e5;
   }
+}
+
+.search__modal {
+  display: none;
+  position: absolute;
+  left: 50%;
+  width: 320px;
+  padding: 20px;
+  margin-left: -160px;
+  background-color: #ffffff;
+  box-shadow: 0px 20px 15px -15px rgba(0, 0, 1, 0.15);
+  box-sizing: border-box;
+  z-index: 10;
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal__list {
+  display: flex;
+  flex-direction: column;
+
+  @include list-reset;
+}
+
+.list__grid {
+
+  @include list-reset;
+}
+
+.modal__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+
+
+  &--reset{
+    justify-content: start;
+  }
+}
+
+.modal__item input {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  width: 55%;
+  padding: 6px 10px 6px 10px;
+  background-color: #F2F2F2;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.item__header {
+  margin-right: auto;
+  letter-spacing: -0.4px;
+}
+
+.item__element {
+  font-size: 20px;
+  padding: 8px 14px 8px 14px;
+  background-color: #F2F2F2;
+  color: #A9A9A9;
+  cursor: pointer;
+
+  &--reset {
+    font-size: 14px;
+    color: #000000;
+    cursor: auto;
+  }
+}
+
+.item__element:hover {
+  color: #000000;
+}
+
+.item__element:active {
+  color: #81B3D2;
+}
+
+.modal__button {
+  width: 100%;
+}
+
+.modal__item input:hover {
+  background-color: #EBEBEB;
+}
+
+.modal__item input:focus {
+  background-color: #ffffff;
+  border: 2px solid #E5E5E5;
 }
 
 @media (min-width: $table-width) {
@@ -100,6 +197,35 @@
       border: none;
       background-color: #e5e5e5;
     }
+  }
+
+  .search__modal {
+    width: 456px;
+    padding: 50px;
+    margin-left: -228px;
+    box-shadow: 0 10px 10px rgba(0,0,1,.15);
+  }
+
+  .list__grid {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .modal__item {
+    margin-bottom: 30px;
+
+
+    &--reset{
+      justify-content: start;
+    }
+  }
+
+  .modal__item input {
+    width: 65%;
+  }
+
+  .modal__button {
+    width: 100%;
   }
 }
 

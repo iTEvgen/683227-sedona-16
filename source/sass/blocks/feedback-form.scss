@@ -319,6 +319,10 @@ input[type="checkbox"]:disabled ~ label::after {
   display: none;
 }
 
+.form__button {
+  width: 280px;
+}
+
 .modal {
   position: fixed;
   background-color: #ffffff;
@@ -642,6 +646,7 @@ input[type="checkbox"]:disabled ~ label::after {
   }
 
   .list__desc-grid {
+    flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
   }
@@ -702,6 +707,4 @@ input[type="checkbox"]:disabled ~ label::after {
   .form__button {
     width: 478px;
   }
-
-
 }

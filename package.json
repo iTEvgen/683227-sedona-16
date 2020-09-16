@@ -21,7 +21,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "readable-stream": "^3.4.0",
-    "stylelint": "^9.10.1",
+    "stylelint": "^13.7.1",
     "stylelint-config-htmlacademy": "^0.1.4"
   },
   "scripts": {
@@ -50,5 +50,6 @@
   ],
   "engines": {
     "node": "8.15"
-  }
+  },
+  "dependencies": {}
 }

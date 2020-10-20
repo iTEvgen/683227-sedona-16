@@ -23,6 +23,7 @@
     "gulp-webp": "^4.0.1",
     "kind-of": "^6.0.3",
     "minimist": "^1.2.5",
+    "object-path": "^0.11.5",
     "readable-stream": "^3.4.0",
     "stylelint": "^13.7.1",
     "stylelint-config-htmlacademy": "^0.1.4"

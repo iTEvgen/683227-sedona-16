@@ -1,4 +1,5 @@
-# Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Седона» 
+<!-- [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url] -->
 
 * Студент: [Евгений Аржиловский](https://up.htmlacademy.ru/adaptive/16/user/683227).
 * Наставник: [Алексей Зольников](https://htmlacademy.ru/profile/id870391).
